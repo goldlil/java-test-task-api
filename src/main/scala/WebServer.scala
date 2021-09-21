@@ -6,7 +6,7 @@ import akka.pattern.{ask, pipe}
 import akka.util.Timeout
 
 import scala.io.StdIn
-import scala.util.{Random, Success}
+import scala.util.{Properties, Random, Success}
 import spray.json._
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -101,7 +101,7 @@ object WebServer {
           }
         }
       }
-
-    Http().bindAndHandle(route1 ~ route2 ~ route3 ~ route4, "0.0.0.0", 8090)
+    val httpPort = Properties.envOrElse("PORT", "8080").toInt
+    Http().bindAndHandle(route1 ~ route2 ~ route3 ~ route4, "0.0.0.0", httpPort)
   }
 }

@@ -102,6 +102,6 @@ object WebServer {
         }
       }
 
-    Http().bindAndHandle(route1 ~ route2 ~ route3 ~ route4, "localhost", 80)
+    Http().bindAndHandle(route1 ~ route2 ~ route3 ~ route4, "0.0.0.0", 8090)
   }
 }

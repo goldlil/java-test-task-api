@@ -11,4 +11,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"  %%  "akka-stream" % "2.6.6"
 )
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.6")
+enablePlugins(JavaAppPackaging)
+

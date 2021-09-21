@@ -10,3 +10,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.12",
   "com.typesafe.akka"  %%  "akka-stream" % "2.6.6"
 )
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.6")
